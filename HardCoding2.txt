@@ -1,0 +1,168 @@
+package hardcoding;
+
+/**
+ *Name: JOELDON L. GAÑOLON
+ *Section: FIDELITY
+ *Year: 4th YEAR
+ */
+import java.util.*;
+public class AssynchronousActivity {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        int again = 1;
+        int order;
+        int food;
+        int snack;
+        int beverage;
+        int loop = 1;
+        int price = 0;
+        System.out.println("----------Welcome to my store-------------");
+        
+        do{
+            loop++;
+            System.out.println("************************");
+            System.out.print("Do you want to order?: ");
+            System.out.println("[1]Yes[2]No");
+        int ask = console.nextInt();
+            System.out.println("************************");
+        if(ask==1)
+        {
+            System.out.println("Enter the order You Want");
+              System.out.println("-----------------------------------");
+            System.out.println("1-FOOD\t\t2-SNACKS\t\t3-beverages");
+              System.out.println("-----------------------------------");
+            order = console.nextInt();
+                switch(order){
+                    case 1: {
+                        System.out.println("\n*******************************************");
+                        System.out.println("----------List of Food in the Menu-----------");
+                        System.out.println("[1-adobo(30) || 2-homba(40) || 3-pancit(20)]");
+                        System.out.println("\n*******************************************");
+                        System.out.print("\nEnter your order: ");
+                        food = console.nextInt();
+                            if(food == 1){
+                                price = price + 30;
+                                System.out.println("--------------------");
+                                System.out.println("You Choose Adobo");
+                                System.out.println("--------------------");
+                                System.out.println("Current price -> "+price);
+                               
+                            }
+                            else if(food == 2){
+                                price = price + 40;
+                                System.out.println("--------------------");
+                                System.out.println("You Choose Humba");
+                                System.out.println("--------------------");
+                                System.out.println("Current price -> "+price);
+                               
+                            }
+                            else if(food == 3){
+                                 price = price + 20;
+                                 System.out.println("--------------------");
+                                 System.out.println("You Choose Pancit");
+                                 System.out.println("--------------------");
+                                 System.out.println("Current price -> "+price);
+                              
+                            }
+                            else{
+                                System.out.println("invalid input");
+                            }
+                        break;
+                    }
+                    case 2:{
+                          System.out.println("\n****************************************************");
+                          System.out.println("------------------List if Snacks----------------------");
+                          System.out.println("1-milkshake(100) || 2-letus(300) || 3-Kwek Kwek(20)");
+                          System.out.println("\n****************************************************");
+                          System.out.print("\nEnter your order: ");
+                        snack = console.nextInt();
+                            if(snack == 1){
+                                price = price + 100;
+                                System.out.println("--------------------");
+                                System.out.println("You Choose Milk Shake");
+                                System.out.println("--------------------");
+                                System.out.println("Current price -> "+price);
+                             
+                            }
+                            else if(snack == 2){
+                                price = price + 300;
+                                System.out.println("--------------------");
+                                System.out.println("You Choose Letus");
+                                System.out.println("--------------------");
+                                System.out.println("Current price -> "+price);
+                               
+                            }
+                            else if(snack == 3){
+                                 price = price + 20;
+                                 System.out.println("--------------------");
+                                 System.out.println("You Choose Kwek Kwek");
+                                 System.out.println("--------------------");
+                                 System.out.println("Current price -> "+price);
+                               
+                            }
+                            else{
+                                System.out.println("invalid input");
+                            }
+                        break;
+                    }
+                    case 3:{
+                        System.out.println("\n*****************************************");
+                        System.out.println("-------------List of Drinks----------------");
+                        System.out.println("1-c2(30) || 2-coke(50) || 3-redbull(100)");
+                        System.out.println("\n*****************************************");
+                        System.out.print("\nEnter your order: ");
+                        beverage = console.nextInt();
+                            if(beverage == 1){
+                                price = price + 30;
+                                System.out.println("--------------------");
+                                System.out.println("You Choose C2");
+                                System.out.println("--------------------");
+                                System.out.println("Current price -> "+price);
+                               
+                            }
+                            else if(beverage == 2){
+                                price = price + 50;
+                                System.out.println("--------------------");
+                                System.out.println("You Choose Coke");
+                                System.out.println("--------------------");
+                                System.out.println("Current price -> "+price);
+                                
+                            }
+                            else if(beverage == 3){
+                                 price = price + 100;
+                                 System.out.println("--------------------");
+                                System.out.println("You Choose Red Bull");
+                                 System.out.println("--------------------");
+                                 System.out.println("Current price -> "+price);
+                                
+                            }
+                            else{
+                                System.out.println("invalid input");
+                            }
+                        break;
+                    }
+                    default:{
+                        System.out.println("invalid");
+                    }
+                    
+                }
+            
+            again = 1; 
+        }
+        else
+        {           
+            System.out.println("INVALID INPUT!!");
+            again = 0;
+            System.out.println("Total price to be Payed: "+price);
+            System.out.println("Enter Ammount: ");
+            int Ammount = console.nextInt();
+            float Change = Ammount - price;
+            System.out.println("Total Change: "+Change);
+        }
+            
+        }while(again == 1);
+    
+
+        
+    }
+}
